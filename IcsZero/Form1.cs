@@ -12,7 +12,7 @@ namespace IcsZero
 {
     public partial class Form1 : Form
     {
-        bool b = true;
+        bool PlayerTurn = true;
         public Form1()
         {
             InitializeComponent();
@@ -26,15 +26,15 @@ namespace IcsZero
         private void label1_Click(object sender, EventArgs e)
         {
             if (label1.Text == "")
-                if (b)
+                if (PlayerTurn)
                 {
                     label1.Text = "0";
-                    b = !b;
+                    PlayerTurn = !PlayerTurn;
                 }
                 else
                 {
                     label1.Text = "1";
-                    b = !b;
+                    PlayerTurn = !PlayerTurn;
                 }
             if (label1.Text == label2.Text && label2.Text == label3.Text)
             {
@@ -89,15 +89,15 @@ namespace IcsZero
         private void label2_Click(object sender, EventArgs e)
         {
             if (label2.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label2.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label2.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
 
             if (label1.Text == label2.Text && label2.Text == label3.Text)
@@ -135,105 +135,105 @@ namespace IcsZero
         private void label3_Click(object sender, EventArgs e)
         {
             if (label3.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label3.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label3.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             if (label6.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label6.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label6.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             if (label5.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label5.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label5.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
             if (label4.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label4.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label4.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
             if (label9.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label9.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label9.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
             if (label8.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label8.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label8.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
             if (label7.Text == "")
-                if (b)
+                if (PlayerTurn)
             {
                 label7.Text = "0";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
             else
             {
                 label7.Text = "1";
-                b = !b;
+                PlayerTurn = !PlayerTurn;
             }
         }
     }
