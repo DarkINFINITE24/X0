@@ -39,45 +39,10 @@ namespace IcsZero
         private void label2_Click(object sender, EventArgs e)
         {
             if (label2.Text == "")
-                if (_playerTurn)
-                {
-                    label2.Text = "0";
-                    _playerTurn = !_playerTurn;
-                }
-                else
-                {
-                    label2.Text = "1";
-                    _playerTurn = !_playerTurn;
-                }
-
-            if (label1.Text == label2.Text && label2.Text == label3.Text)
             {
-                if (label1.Text == "0") MessageBox.Show("A castigat Toni");
-                else MessageBox.Show("A castigat Dorel");
-                label1.Text = "";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "";
-                label5.Text = "";
-                label6.Text = "";
-                label7.Text = "";
-                label8.Text = "";
-                label9.Text = "";
+                writeXor0(label2);
             }
-            if (label2.Text == label5.Text && label5.Text == label8.Text)
-            {
-                if (label1.Text == "0") MessageBox.Show("A castigat Toni");
-                else MessageBox.Show("A castigat Dorel");
-                label1.Text = "";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "";
-                label5.Text = "";
-                label6.Text = "";
-                label7.Text = "";
-                label8.Text = "";
-                label9.Text = "";
-            }
+            whoIsTheWinner();
 
         }
 
@@ -163,19 +128,43 @@ namespace IcsZero
 
         private void whoIsTheWinner()
         {
-            if (label1.Text == label2.Text && label2.Text == label3.Text)
+            if (label1.Text == label2.Text && label2.Text == label3.Text && label1.Text!="")
             {
                 showWinner(label1);
             }
-            if (label1.Text == label4.Text && label4.Text == label7.Text)
+            if (label1.Text == label4.Text && label4.Text == label7.Text && label1.Text!="")
             {
                 showWinner(label1);
             }
-            if (label1.Text == label5.Text && label5.Text == label9.Text)
+            if (label1.Text == label5.Text && label5.Text == label9.Text && label1.Text!="")
             {
                 showWinner(label1);
             }
 
+            if (label2.Text == label5.Text && label5.Text == label8.Text && label2.Text!="")
+            {
+                showWinner(label2);
+            }
+
+            if (label4.Text == label5.Text && label5.Text == label6.Text && label4.Text!="")
+            {
+                showWinner(label4);
+            }
+
+            if (label3.Text == label6.Text && label6.Text == label9.Text && label3.Text!="")
+            {
+                showWinner(label3);
+            }
+
+            if (label7.Text == label8.Text && label8.Text == label9.Text && label7.Text!="")
+            {
+                showWinner(label7);
+            }
+
+            if (label7.Text == label5.Text && label5.Text == label3.Text && label7.Text!="")
+            {
+                showWinner(label7);
+            }
         }
 
         private void resetGame()
