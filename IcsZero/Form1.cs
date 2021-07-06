@@ -15,6 +15,8 @@ namespace IcsZero
         bool _playerTurn = true;
         private string showX = "X";
         private string show0 = "0";
+        private string toniWinner = "A castigat Toni!";
+        private string dorelWinner = "A castigat Dorel!";
         public Form1()
         {
             InitializeComponent();
@@ -183,6 +185,11 @@ namespace IcsZero
                 label7.Text = showX;
                 _playerTurn = !_playerTurn;
             }
+        }
+
+        private void whoIsTheWinner()
+        {
+
         }
     }
 }
