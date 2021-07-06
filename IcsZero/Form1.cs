@@ -26,51 +26,9 @@ namespace IcsZero
         {
             if (label1.Text == "")
             {
-                writeXor0();
+                writeXor0(label1);
             }
-            if (label1.Text == label2.Text && label2.Text == label3.Text)
-            {
-                if (label1.Text == "0") MessageBox.Show("A castigat Toni");
-                else MessageBox.Show("A castigat Dorel");
-                label1.Text = "";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "";
-                label5.Text = "";
-                label6.Text = "";
-                label7.Text = "";
-                label8.Text = "";
-                label9.Text = "";
-            }
-            if (label1.Text == label4.Text && label4.Text == label7.Text)
-            {
-                if (label1.Text == "0") MessageBox.Show("A castigat Toni");
-                else MessageBox.Show("A castigat Dorel");
-                label1.Text = "";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "";
-                label5.Text = "";
-                label6.Text = "";
-                label7.Text = "";
-                label8.Text = "";
-                label9.Text = "";
-            }
-            if (label1.Text == label5.Text && label5.Text == label9.Text)
-            {
-                if (label1.Text == "0") MessageBox.Show("A castigat Toni");
-                else MessageBox.Show("A castigat Dorel");
-                label1.Text = "";
-                label2.Text = "";
-                label3.Text = "";
-                label4.Text = "";
-                label5.Text = "";
-                label6.Text = "";
-                label7.Text = "";
-                label8.Text = "";
-                label9.Text = "";
-            }
-
+            whoIsTheWinner();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -127,69 +85,123 @@ namespace IcsZero
         private void label3_Click(object sender, EventArgs e)
         {
             if (label3.Text == "")
-                writeXor0();
+            {
+                writeXor0(label3);
+            }
+            whoIsTheWinner();
         }
 
         private void label6_Click(object sender, EventArgs e)
         {
             if (label6.Text == "")
-                writeXor0();
+            {
+                writeXor0(label6);
+            }
+            whoIsTheWinner();
         }
 
         private void label5_Click(object sender, EventArgs e)
         {
             if (label5.Text == "")
-                writeXor0();
+            {
+                writeXor0(label5);
+            }
+            whoIsTheWinner();
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
             if (label4.Text == "")
-                writeXor0();
+            {
+                writeXor0(label4);
+            }
+            whoIsTheWinner();
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
             if (label9.Text == "")
             {
-                writeXor0();
+                writeXor0(label9);
             }
+            whoIsTheWinner();
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
             if (label8.Text == "")
             {
-                writeXor0();
+                writeXor0(label8);
             }
+            whoIsTheWinner();
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
+
             if (label7.Text == "")
             {
-                writeXor0();
+                writeXor0(label7);
             }
+            whoIsTheWinner();
 
         }
 
-        private void writeXor0()
+        private void writeXor0(Label x)
         {
             if (_playerTurn)
             {
-                label7.Text = show0;
+                x.Text = show0;
                 _playerTurn = !_playerTurn;
             }
             else
             {
-                label7.Text = showX;
+                x.Text = showX;
                 _playerTurn = !_playerTurn;
             }
         }
 
         private void whoIsTheWinner()
         {
+            if (label1.Text == label2.Text && label2.Text == label3.Text)
+            {
+                showWinner(label1);
+            }
+            if (label1.Text == label4.Text && label4.Text == label7.Text)
+            {
+                showWinner(label1);
+            }
+            if (label1.Text == label5.Text && label5.Text == label9.Text)
+            {
+                showWinner(label1);
+            }
 
+        }
+
+        private void resetGame()
+        {
+            label1.Text = "";
+            label2.Text = "";
+            label3.Text = "";
+            label4.Text = "";
+            label5.Text = "";
+            label6.Text = "";
+            label7.Text = "";
+            label8.Text = "";
+            label9.Text = "";
+        }
+
+        private void showWinner(Label cell)
+        {
+            if (cell.Text == show0)
+            {
+                MessageBox.Show(toniWinner);
+            }
+            else
+            {
+                MessageBox.Show(dorelWinner);
+            }
+            resetGame();
         }
     }
 }
