@@ -26,7 +26,7 @@ namespace IcsZero
             {
                 writeXor0();
             }
-            if (label1.Text == label2.Text == label3.Text)
+            if (label1.Text == label2.Text && label2.Text == label3.Text)
             {
                 if (label1.Text == "0") MessageBox.Show("A castigat Toni");
                 else MessageBox.Show("A castigat Dorel");
