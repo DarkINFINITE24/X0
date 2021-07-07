@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace IcsZero
 {
-    public partial class Form1 : Form
+    public partial class gameWindowForm : Form
     {
         private bool playerTurn = true;
         private string showX = "X";
@@ -19,7 +19,7 @@ namespace IcsZero
         private string dorelWinner = "A castigat Dorel!";
         private string drawMessage = "Nu a castigat nimeni!";
 
-        public Form1()
+        public gameWindowForm()
         {
             InitializeComponent();
         }
