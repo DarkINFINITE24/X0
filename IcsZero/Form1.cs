@@ -12,12 +12,7 @@ namespace IcsZero
 {
     public partial class gameWindowForm : Form
     {
-        private bool playerTurn = true;
-        private string showX = "X";
-        private string show0 = "0";
-        private string toniWinner = "A castigat Toni!";
-        private string dorelWinner = "A castigat Dorel!";
-        private string drawMessage = "Nu a castigat nimeni!";
+        
 
         public gameWindowForm()
         {
@@ -80,15 +75,15 @@ namespace IcsZero
         private void WriteXor0(object x)
         {
             Label y = (Label)x;
-            if (playerTurn)
+            if (Constants.playerTurn)
             {
-                y.Text = show0;
-                playerTurn = !playerTurn;
+                y.Text = Constants.show0;
+                Constants.playerTurn = !Constants.playerTurn;
             }
             else
             {
-                y.Text = showX;
-                playerTurn = !playerTurn;
+                y.Text = Constants.showX;
+                Constants.playerTurn = !Constants.playerTurn;
             }
         }
 
@@ -139,7 +134,7 @@ namespace IcsZero
         {
             if (label1.Text != "" && label2.Text != "" && label3.Text != "" && label4.Text != "" && label5.Text != "" && label6.Text != "" && label7.Text != "" && label8.Text != "" && label9.Text != "")
             {
-                MessageBox.Show(drawMessage);
+                MessageBox.Show(Constants.drawMessage);
                 ResetGame();
             }
 
@@ -160,13 +155,13 @@ namespace IcsZero
 
         private void ShowWinner(Label cell)
         {
-            if (cell.Text == show0)
+            if (cell.Text == Constants.show0)
             {
-                MessageBox.Show(toniWinner);
+                MessageBox.Show(Constants.toniWinner);
             }
             else
             {
-                MessageBox.Show(dorelWinner);
+                MessageBox.Show(Constants.dorelWinner);
             }
             ResetGame();
         }
