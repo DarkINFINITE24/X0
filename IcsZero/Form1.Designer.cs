@@ -38,6 +38,7 @@ namespace IcsZero
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.resetGameButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -148,11 +149,22 @@ namespace IcsZero
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // resetGameButton
+            // 
+            this.resetGameButton.Location = new System.Drawing.Point(556, 182);
+            this.resetGameButton.Name = "resetGameButton";
+            this.resetGameButton.Size = new System.Drawing.Size(75, 23);
+            this.resetGameButton.TabIndex = 9;
+            this.resetGameButton.Text = "Reset Game";
+            this.resetGameButton.UseVisualStyleBackColor = true;
+            this.resetGameButton.Click += new System.EventHandler(this.resetGameButton_Click);
+            // 
             // gameWindowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 697);
+            this.Controls.Add(this.resetGameButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
@@ -181,6 +193,7 @@ namespace IcsZero
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button resetGameButton;
     }
 }
 

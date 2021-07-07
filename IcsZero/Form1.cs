@@ -180,5 +180,10 @@ namespace IcsZero
 
             whoIsTheWinner();
         }
+
+        private void resetGameButton_Click(object sender, EventArgs e)
+        {
+            ResetGame();
+        }
     }
 }
